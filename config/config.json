@@ -1,0 +1,11 @@
+{
+  "development": {
+    "username": "test1",
+    "password": "1234",
+    "database": "board",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql",
+    "pool": { "max": 5, "min": 0, "idle": 10000 }
+  }
+}

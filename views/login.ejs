@@ -1,0 +1,21 @@
+<!DOCTYPE html> <html > <head>
+  <% include ./header.ejs %>      
+<link rel="stylesheet" href="stylesheets/login.css">
+
+</head> <body>
+       
+  <% include ./nav.ejs %>
+   <div id="login_wrapper">
+	<div class="join">Login</div>
+    	<div class="lock"></div>
+	        <div class="clr"></div>
+          <div class="forms">
+              <form action="/login" method="post" name="login" id="form_login">
+                <input name="email" type="email" placeholder="Enter your email address..." size="65" onClick="border: 1px solid #30a8da;" 
+id="mail" required/>
+                <input name="password" type="password" placeholder="Enter a password..." size="65" onClick="border: 1px solid 
+#30a8da;" id="password" required/>
+                <input name="" type="submit" value="Login">
+
+
+ <% include ./footer.ejs %>

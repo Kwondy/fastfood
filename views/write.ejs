@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<% include ./nav2.ejs%>
+<h1><%= title %></h1>
+
+<form action="/board/write" method="post" onsubmit="return onWriteSubmit()">
+    <table border="1">
+        <tr>
+            <td>작성자</td>
+            <td><input type="text" name="id" id="id" required/></td>
+        </tr>
+        <tr>
+            <td>제목</td>
+            <td><input type="text" name="title" id="title" required/></td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td><textarea name="content" id="content" cols="30" rows="10" required></textarea></td>
+        </tr>
+        <tr>
+            <td>패스워드</td>
+            <td><input type="password" name="passwd" id="passwd" required/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit"></button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script>
+    function onWriteSubmit()
+    {
+        if ( $("#id").val().trim() == "아이디를 입력하세요" )
+        {
+            var message = "";
+            $("#id").val("");
+            $("#id").focus();
+            alert(message);
+            return false;
+        }
+
+        if ( $("#title").val().trim() == "제목을 입력해 주세요" )
+        {
+            var message = "";
+            $("#title").val("");
+            $("#title").focus();
+            alert(message);
+            return false;
+        }
+
+        if ( $("#content").val().trim() == "본문 내용을 입력해 주세요" )
+        {
+            var message = ";
+            $("#content").val("");
+            $("#content").focus();
+            alert(message);
+            return false;
+        }
+
+        if ( $("#passwd").val().trim() == "패스워드를 입력해 주세요" )
+        {
+            var message = "";
+            $("#passwd").val("");
+            $("#passwd").focus();
+            alert(message);
+            return false;
+        }
+    }
+</script>

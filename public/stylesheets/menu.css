@@ -1,0 +1,33 @@
+body {
+	padding-top: 80px;
+  	padding-bottom: 4rem;
+  	color: #5a5a5a;
+	line-height: 1;
+}
+  #menu{
+    max-width:800px;
+    min-height:150px;
+    margin: 0 auto;
+    border:1px solid black;
+
+  }
+  #shop_img{
+    max-width:150px;
+    height:100px;
+    float: left;
+    padding-right: 20px;
+  }
+  #shop_img > img{
+    max-width:100%;
+    height:auto;
+    float:left;
+    vertical-align: middle;
+  }
+  #shop_info{
+    width:600%;
+    height:100px;
+    margin-left:20px;
+
+
+  }
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html> <html>
+  <head>
+    <% include ./header.ejs %>
+    <link rel="stylesheet" href="stylesheets/register.css">
+  </head>
+  <body>
+    <% include ./nav.ejs %>
+    <div id="register_wrapper">
+	<div class="join">Register</div>
+	<div class="lock"></div>
+	<div class="clr"></div><br>
+	<div class="mail-text">Sign up using your email address.</div><br>
+	
+        <div class="forms">
+        	<form action="/register" method="post" name="register">
+			<input name="email" type="email" placeholder="Enter your email address..." size="65" onClick="border: 1px solid #30a8da;" id="mail" required/>
+                        <input name="name" type="text" placeholder="Enter your full name..." size="65" onClick="border: 1px solid #30a8da;" id="name" required/>
+                        <input name="password" type="password" placeholder="Enter a password..." size="65" onClick="border: 1px solid #30a8da;" id="password" required/>
+                        <input name="ph" type="tel"  placeholder="Enter your phone number..." size="65" onClick="border: 1px solid #30a8da;" id="ph" required/>
+			<input name="reg_button" type="submit" value="register" id="register" required>
+                </form>
+        </div>
+  </body>
+<% include ./footer.ejs %>

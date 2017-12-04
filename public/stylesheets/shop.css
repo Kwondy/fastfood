@@ -1,0 +1,28 @@
+body {
+	padding-top: 80px;
+  	padding-bottom: 4rem;
+  	color: #5a5a5a;
+	line-height: 1;
+}
+#main > div {
+	margin-top:70px;
+	margin-left:100px;
+	max-width:900px;
+	height:300px;
+}
+#main > div > .box{
+	float:left;
+	width:170px;
+	height:250px;
+	margin:10px 20px;
+	border:1px solid gray;
+}
+
+#main > div > .box > a > img{
+	width:170px;
+	height:250px;
+	
+}
+#main > div > .box > div{
+	width:170px;
+	height:50px;

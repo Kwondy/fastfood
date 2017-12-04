@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <% include ./header.ejs%>
+     <link rel="stylesheet" href="stylesheets/list.css">
+</head>
+<body>
+   <% include ./nav.ejs%>
+   <h1><%= title %></h1>
+
+   <a href="/board/write">글쓰기로 이동 </a>
+   <br>
+   <br>
+
+   <table class="table" width="690" border="1" style="table-layout: fixed;"><br>
+    <tr bgcolor="gray">
+        <td width="40">번호</td>
+        <td width="100">작성자</td>
+        <td width="340">제목</td>
+        <td width="50">조회수</td>
+        <td width="160">날짜</td>
+    </tr>
+
+    <%
+     for(var i=0; i<rows.length; i++)
+     {
+        var oneItem = rows[i];
+   %>
+   
+    <tr>
+        <td width="40"><%=oneItem.no%></td>
+        <td width="100"><%=oneItem.id%></td>
+        <td width="340"><a href="/board/read/<%=oneItem.no%>"><%=oneItem.title%></a></td>
+        <td width="50"><%=oneItem.hit%></td>
+        <td width="160"><%=oneItem.regdate%></td>
+    </tr>
+
+   <%
+        }
+   %>
+
+</table>
+<% include ./footer.ejs %>
